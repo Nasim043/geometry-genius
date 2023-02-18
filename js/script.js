@@ -7,14 +7,20 @@ const pentagon_btn = document.getElementById('btn-pentagon');
 const ellipse_btn = document.getElementById('btn-ellipse');
 
 // get the input value and validation
-function getAndCalculate(e) {
-  let number1 = e.target.parentNode.children[0].value;
-  let number2 = e.target.parentNode.children[2].value;
+let number1;
+let number2;
+function validateAndCalculate(e) {
+  number1 = e.target.parentNode.children[0].value;
+  number2 = e.target.parentNode.children[2].value;
   if (number1 == '' || number2 == '' || Number(number1) < 0 || Number(number2) < 0) {
     alert('Please enter a valid number');
+    return false;
   } else {
+    return true;
     console.log(Number(number1), Number(number2));
     console.log(typeof Number(number1), typeof Number(number2));
+    const area = areaOfShapes2(10,12);
+    addAreaCalculation(e,area);
   }
 }
 
@@ -36,11 +42,23 @@ function addAreaCalculation(e,area){
 // Click events for calculate button
 triangle_btn.addEventListener('click', function (e) {
   console.log('I am in triangle');
-  getAndCalculate(e);
+  const isValidate = validateAndCalculate(e);
+  if(isValidate){
+    const area = areaOfShapes3(Number(number1),Number(number2));
+    addAreaCalculation(e,area);
+    e.target.parentNode.children[0].value = '';
+    e.target.parentNode.children[2].value = '';
+  }
 });
 rectangle_btn.addEventListener('click', function (e) {
   console.log('I am in rectangle');
-  getAndCalculate(e);
+  const isValidate = validateAndCalculate(e);
+  if(isValidate){
+    const area = areaOfShapes2(Number(number1),Number(number2));
+    addAreaCalculation(e,area);
+    e.target.parentNode.children[0].value = '';
+    e.target.parentNode.children[2].value = '';
+  }
 });
 parallelogram_btn.addEventListener('click', function (e) {
   console.log('I am in parallelogram');

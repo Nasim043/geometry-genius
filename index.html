@@ -17,6 +17,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Geometri Genius</title>
     <script>
       tailwind.config = {
@@ -44,7 +45,7 @@
           <h3 class="text-3xl font-normal">Geometry Genius</h3>
         </div>
         <div>
-          <button class="bg-blue text-white text-lg font-normal border-0 rounded-lg px-4 py-1 md:px-4 md:py-2">Blog</button>
+          <a href="blog.html" class="bg-blue text-white text-lg font-normal border-0 rounded-lg px-4 py-1 md:px-4 md:py-2">Blog</a>
         </div>
       </div>
     </header>
@@ -63,9 +64,9 @@
               <h2 class="card-title text-2xl font-semibold">Triangle</h2>
               <p>Area (A) = 0.5 &#10005 b &#10005 h</p>
               <div class="card-actions justify-center items-center">
-                <input type="number" id="b-value" placeholder="b" class="input input-bordered input-sm w-1/3 max-w-xs" />
+                <input type="number" id="b-value" placeholder="b" class="input input-bordered input-sm w-[30%] max-w-xs" />
                 <span>cm</span>
-                <input type="number" id="h-value" placeholder="h" class="input input-bordered input-sm w-1/3 max-w-xs" />
+                <input type="number" id="h-value" placeholder="h" class="input input-bordered input-sm w-[30%] max-w-xs" />
                 <span>cm</span>
                 <button id="btn-triangle" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
@@ -83,9 +84,9 @@
               <h2 class="card-title text-2xl font-semibold">Rectangle</h2>
               <p>Area (A) = w &#10005 l</p>
               <div class="card-actions justify-center items-center">
-                <input type="number" id="w-value" placeholder="w" class="input input-bordered input-sm w-1/3 max-w-xs" />
+                <input type="number" id="w-value" placeholder="w" class="input input-bordered input-sm w-[30%] max-w-xs" />
                 <span>cm</span>
-                <input type="number" id="l-value" placeholder="l" class="input input-bordered input-sm w-1/3 max-w-xs" />
+                <input type="number" id="l-value" placeholder="l" class="input input-bordered input-sm w-[30%] max-w-xs" />
                 <span>cm</span>
                 <button id="btn-rectangle" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
@@ -175,6 +176,6 @@
     </main>
     <script src="js/calculateArea.js"></script>
     <script src="js/script.js"></script>
-    <!-- <script src="js/hoverEffect.js"></script> -->
+    <script src="js/hoverEffect.js"></script>
   </body>
 </html>

@@ -18,19 +18,22 @@ function getAndCalculate(e) {
   }
 }
 
-// add area in the area calculation
+// add rows in the area calculation
+let serial = 1;
 function addAreaCalculation(e,area){
   const getTablebody = document.getElementById('table-container'); 
   const shapeName =  e.target.parentNode.parentNode.children[0].innerText;
-  console.log(shapeName);
   const tr = document.createElement('tr');
   tr.innerHTML = `
-    <th>1</th>
+    <th>${serial}</th>
     <td>${shapeName}</td>
     <td>${area}cm<sup>2</sup></td>
     <td><button class="bg-blue text-white py-1 px-2 rounded-md">Covert to m<sup>2</sup></button></td>`;
   getTablebody.appendChild(tr);
+  serial++;
 }
+
+// Click events for calculate button
 triangle_btn.addEventListener('click', function (e) {
   console.log('I am in triangle');
   getAndCalculate(e);
@@ -40,23 +43,22 @@ rectangle_btn.addEventListener('click', function (e) {
   getAndCalculate(e);
 });
 parallelogram_btn.addEventListener('click', function (e) {
-  // console.log('I am in parallelogram');
+  console.log('I am in parallelogram');
   const area = areaOfShapes2(10,12);
-  // console.log(area);
   addAreaCalculation(e,area);
 });
 rhombus_btn.addEventListener('click', function (e) {
   console.log('I am in rhombus');
   const area = areaOfShapes3(16,8);
-  console.log(area);
+  addAreaCalculation(e,area);
 });
 pentagon_btn.addEventListener('click', function (e) {
   console.log('I am in pentagon');
   const area = areaOfShapes3(6,10);
-  console.log(area);
+  addAreaCalculation(e,area);
 });
 ellipse_btn.addEventListener('click', function (e) {
   console.log('I am in ellipse');
   const area = areaOfEllipse(10,4);
-  console.log(area);
+  addAreaCalculation(e,area);
 });

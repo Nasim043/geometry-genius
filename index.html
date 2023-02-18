@@ -67,7 +67,7 @@
                 <span>cm</span>
                 <input type="number" id="h-value" placeholder="h" class="input input-bordered input-sm w-1/3 max-w-xs" />
                 <span>cm</span>
-                <button id="btn-triangle" class="w-5/6 bg-blue text-white text-lg fot-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
+                <button id="btn-triangle" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@
                 <span>cm</span>
                 <input type="number" id="l-value" placeholder="l" class="input input-bordered input-sm w-1/3 max-w-xs" />
                 <span>cm</span>
-                <button id="btn-rectangle" class="w-5/6 bg-blue text-white text-lg fot-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
+                <button id="btn-rectangle" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@
               <p>Area (A) = b &#10005 h</p>
               <div class="card-actions justify-center items-center">
                 <p>b = 10cm, h = 12cm</p>
-                <button id="btn-parallelogram" class="w-5/6 bg-blue text-white text-lg fot-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
+                <button id="btn-parallelogram" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
               <p>Area (A) = 0.5 &#10005 d<sub>1</sub> &#10005 d<sub>2</sub></p>
               <div class="card-actions justify-center items-center">
                 <p>d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</p>
-                <button id="btn-rhombus" class="w-5/6 bg-blue text-white text-lg fot-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
+                <button id="btn-rhombus" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@
               <p>Area (A) = 0.5 &#10005 p &#10005 p</p>
               <div class="card-actions justify-center items-center">
                 <p>p = 6cm, b = 10cm</p>
-                <button id="btn-pentagon" class="w-5/6 bg-blue text-white text-lg fot-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
+                <button id="btn-pentagon" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
             </div>
           </div>
@@ -155,13 +155,27 @@
               <p>Area (A) = &pi;ab</p>
               <div class="card-actions justify-center items-center">
                 <p>a = 10cm, b = 4cm</p>
-                <button id="btn-ellipse" class="w-5/6 bg-blue text-white text-lg fot-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
+                <button id="btn-ellipse" class="w-5/6 bg-blue text-white text-lg font-normal border-0 rounded-lg mt-5 py-2">Calculate</button>
               </div>
             </div>
           </div>
         </div>
         <div class="w-full md:w-2/5 bg-red-400 text-center">
           <h1 class="underline text-xl font-bold">Area Calculation</h1>
+          <p class="add-area">
+            <div class="overflow-x-auto">
+              <table class="table w-full">
+                <tbody id="table-container">
+                  <tr>
+                    <th>1</th>
+                    <td>Triangle</td>
+                    <td>100cm<sup>2</sup></td>
+                    <td><button class="bg-blue text-white py-1 px-2 rounded-md">Covert to m<sup>2</sup></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </p>
         </div>
       </section>
     </main>

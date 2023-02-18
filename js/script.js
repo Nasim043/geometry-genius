@@ -31,10 +31,10 @@ function addAreaCalculation(e,area){
   const shapeName =  e.target.parentNode.parentNode.children[0].innerText;
   const tr = document.createElement('tr');
   tr.innerHTML = `
-    <th>${serial}</th>
-    <td>${shapeName}</td>
-    <td>${area}cm<sup>2</sup></td>
-    <td><button class="bg-blue text-white py-1 px-2 rounded-md">Covert to m<sup>2</sup></button></td>`;
+    <th class="px-1 md:px-4">${serial}</th>
+    <td class="px-2">${shapeName}</td>
+    <td class="px-2">${area}cm<sup>2</sup></td>
+    <td class="px-2"><button class="bg-blue text-white py-1 px-1 md:px-2 rounded-md">Covert to m<sup>2</sup></button></td>`;
   getTablebody.appendChild(tr);
   serial++;
 }

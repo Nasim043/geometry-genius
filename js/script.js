@@ -25,3 +25,23 @@ rectangle_btn.addEventListener('click', function (e) {
   console.log('I am in rectangle');
   getAndCalculate(e);
 });
+parallelogram_btn.addEventListener('click', function (e) {
+  console.log('I am in parallelogram');
+  const area = areaOfShapes2(10,12);
+  console.log(area);
+});
+rhombus_btn.addEventListener('click', function (e) {
+  console.log('I am in rhombus');
+  const area = areaOfShapes3(16,8);
+  console.log(area);
+});
+pentagon_btn.addEventListener('click', function (e) {
+  console.log('I am in pentagon');
+  const area = areaOfShapes3(6,10);
+  console.log(area);
+});
+ellipse_btn.addEventListener('click', function (e) {
+  console.log('I am in ellipse');
+  const area = areaOfEllipse(10,4);
+  console.log(area);
+});
